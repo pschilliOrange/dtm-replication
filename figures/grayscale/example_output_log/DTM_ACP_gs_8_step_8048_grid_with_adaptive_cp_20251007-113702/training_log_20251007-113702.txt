@@ -1,0 +1,221 @@
+Configuration:
+{ 'cp': { 'adaptive_cp': True,
+          'adaptive_threshold': 0.06,
+          'correlation_penalty': (0.0,),
+          'cp_min': 0.001},
+  'data': { 'dataset_name': 'fashion_mnist',
+            'pixel_threshold_for_single_trials': 0.1,
+            'target_classes': (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)},
+  'diffusion_rates': {'image_rate': 0.9, 'label_rate': 0.2},
+  'diffusion_schedule': { 'diffusion_offset': 0.15,
+                          'kind': 'log',
+                          'num_diffusion_steps': 8},
+  'exp': { 'compute_autocorr': True,
+           'descriptor': 'DTM_gs_12',
+           'graph_seeds': (1, 2, 3, 4, 5, 6, 7, 8),
+           'n_cores': 2,
+           'seed': 1},
+  'generation': { 'fid_images_per_digit': 512,
+                  'generation_beta_end': 1.2,
+                  'generation_beta_start': 0.8,
+                  'steps_warmup': 800},
+  'graph': { 'graph_preset_architecture': 8048,
+             'grayscale_levels': 7,
+             'num_label_spots': 20,
+             'torus': True},
+  'optim': { 'alpha_cosine_decay': 0.2,
+             'b2_adam': 0.999,
+             'momentum': 0.9,
+             'n_epochs_for_lrd': 20,
+             'step_learning_rates': (0.012,)},
+  'sampling': { 'batch_size': 400,
+                'n_samples': 50,
+                'steps_per_sample': 8,
+                'steps_warmup': 400,
+                'training_beta': 1.0},
+  'wd': {'adaptive_wd': False, 'wd_min': 0.001, 'weight_decay': (0.0,)}}
+autocorrelations at epoch 0: step 0: 0.0004621701955329627 step 1: 0.0004156009526923299 step 2: 0.0011783839436247945 step 3: 0.0007736415136605501 step 4: 0.0 step 5: 0.0015161375049501657 step 6: 0.0006505254423245788 step 7: 0.0 
+Epoch 0 free FID: 311.15 (best: 311.15) clamped FID: 311.38 (best: 311.38)
+autocorrelations at epoch 1: step 0: 0.0059969788417220116 step 1: 0.0 step 2: 0.0027659900952130556 step 3: 0.0021784754935652018 step 4: 6.0346428654156625e-05 step 5: 0.005826643668115139 step 6: 0.001122871646657586 step 7: 0.0034180330112576485 
+correlation penalties: step 0: 0.0 step 1: 0.0 step 2: 0.0 step 3: 0.0 step 4: 0.0 step 5: 0.0 step 6: 0.0 step 7: 0.0 
+Epoch 1 free FID: 202.18 (best: 202.18) clamped FID: 191.22 (best: 191.22)
+autocorrelations at epoch 2: step 0: 0.0 step 1: 0.0012232839362695813 step 2: 0.0 step 3: 0.006348691415041685 step 4: 0.0003615249879658222 step 5: 0.0 step 6: 0.004556948319077492 step 7: 0.0013298334088176489 
+correlation penalties: step 0: 0.0 step 1: 0.0 step 2: 0.0 step 3: 0.0 step 4: 0.0 step 5: 0.0 step 6: 0.0 step 7: 0.0 
+Epoch 2 free FID: 191.57 (best: 191.57) clamped FID: 180.46 (best: 180.46)
+autocorrelations at epoch 3: step 0: 0.002636002842336893 step 1: 0.00023735221475362778 step 2: 0.0 step 3: 0.0014289992395788431 step 4: 0.0 step 5: 0.002496713073924184 step 6: 0.000536824285518378 step 7: 0.023478636518120766 
+correlation penalties: step 0: 0.0 step 1: 0.0 step 2: 0.0 step 3: 0.0 step 4: 0.0 step 5: 0.0 step 6: 0.0 step 7: 0.0 
+Epoch 3 free FID: 184.26 (best: 184.26) clamped FID: 178.68 (best: 178.68)
+autocorrelations at epoch 4: step 0: 0.0008025047136470675 step 1: 0.00035328621743246913 step 2: 0.00520100723952055 step 3: 0.0 step 4: 0.009404212236404419 step 5: 0.003508570371195674 step 6: 0.031413547694683075 step 7: 0.009348073974251747 
+correlation penalties: step 0: 0.0 step 1: 0.0 step 2: 0.0 step 3: 0.0 step 4: 0.0 step 5: 0.0 step 6: 0.0 step 7: 0.0 
+Epoch 4 free FID: 188.23 (best: 184.26) clamped FID: 186.53 (best: 178.68)
+autocorrelations at epoch 5: step 0: 0.0008487685699947178 step 1: 0.0 step 2: 0.0016249666223302484 step 3: 0.0015448081539943814 step 4: 0.0003746988077182323 step 5: 0.014821009710431099 step 6: 0.05755981430411339 step 7: 0.021482709795236588 
+correlation penalties: step 0: 0.0 step 1: 0.0 step 2: 0.0 step 3: 0.0 step 4: 0.0 step 5: 0.0 step 6: 0.0 step 7: 0.0 
+Epoch 5 free FID: 182.36 (best: 182.36) clamped FID: 177.59 (best: 177.59)
+autocorrelations at epoch 6: step 0: 0.0016012709820643067 step 1: 0.000992241664789617 step 2: 0.003074049949645996 step 3: 0.0019558193162083626 step 4: 0.004260431043803692 step 5: 0.00566621171310544 step 6: 0.07394137978553772 step 7: 0.03367806226015091 
+correlation penalties: step 0: 0.0 step 1: 0.0 step 2: 0.0 step 3: 0.0 step 4: 0.0 step 5: 0.0 step 6: 0.0012000000569969416 step 7: 0.0 
+Epoch 6 free FID: 182.59 (best: 182.36) clamped FID: 182.21 (best: 177.59)
+autocorrelations at epoch 7: step 0: 0.002662034472450614 step 1: 0.0005376863991841674 step 2: 0.0 step 3: 0.0 step 4: 0.0023896375205367804 step 5: 0.0032427990809082985 step 6: 0.09015786647796631 step 7: 0.027806878089904785 
+correlation penalties: step 0: 0.0 step 1: 0.0 step 2: 0.0 step 3: 0.0 step 4: 0.0 step 5: 0.0 step 6: 0.001440000138245523 step 7: 0.0 
+Epoch 7 free FID: 197.29 (best: 182.36) clamped FID: 183.23 (best: 177.59)
+autocorrelations at epoch 8: step 0: 0.004504680167883635 step 1: 0.0 step 2: 0.0 step 3: 0.0036330276634544134 step 4: 0.000854893063660711 step 5: 0.047783493995666504 step 6: 0.05202912539243698 step 7: 0.03233207389712334 
+correlation penalties: step 0: 0.0 step 1: 0.0 step 2: 0.0 step 3: 0.0 step 4: 0.0 step 5: 0.0 step 6: 0.0011137399123981595 step 7: 0.0 
+Epoch 8 free FID: 181.68 (best: 181.68) clamped FID: 178.73 (best: 177.59)
+autocorrelations at epoch 9: step 0: 0.007442598231136799 step 1: 0.0024019500706344843 step 2: 0.0 step 3: 0.0 step 4: 0.0020840256474912167 step 5: 0.09202435612678528 step 6: 0.06784189492464066 step 7: 0.03527253493666649 
+correlation penalties: step 0: 0.0 step 1: 0.0 step 2: 0.0 step 3: 0.0 step 4: 0.0 step 5: 0.0012000000569969416 step 6: 0.0013364879414439201 step 7: 0.0 
+Epoch 9 free FID: 182.57 (best: 181.68) clamped FID: 177.95 (best: 177.59)
+autocorrelations at epoch 10: step 0: 0.002273977966979146 step 1: 0.0018644783413037658 step 2: 0.0 step 3: 0.003792028408497572 step 4: 0.0 step 5: 0.08940507471561432 step 6: 0.04996035620570183 step 7: 0.03618834540247917 
+correlation penalties: step 0: 0.0 step 1: 0.0 step 2: 0.0 step 3: 0.0 step 4: 0.0 step 5: 0.0011400000657886267 step 6: 0.0010244641453027725 step 7: 0.0 
+Epoch 10 free FID: 174.73 (best: 174.73) clamped FID: 172.67 (best: 172.67)
+autocorrelations at epoch 11: step 0: 0.0 step 1: 0.006157929543405771 step 2: 0.0018806098960340023 step 3: 0.0016294994857162237 step 4: 0.0028488149400800467 step 5: 0.11469200998544693 step 6: 0.06073601171374321 step 7: 0.03087778016924858 
+correlation penalties: step 0: 0.0 step 1: 0.0 step 2: 0.0 step 3: 0.0 step 4: 0.0 step 5: 0.00171000009868294 step 6: 0.001229356974363327 step 7: 0.0 
+Epoch 11 free FID: 183.67 (best: 174.73) clamped FID: 176.05 (best: 172.67)
+autocorrelations at epoch 12: step 0: 0.0 step 1: 0.0 step 2: 0.0006700280937366188 step 3: 0.005953242536634207 step 4: 0.0 step 5: 0.0780402347445488 step 6: 0.0793667733669281 step 7: 0.027508722618222237 
+correlation penalties: step 0: 0.0 step 1: 0.0 step 2: 0.0 step 3: 0.0 step 4: 0.0 step 5: 0.001624500029720366 step 6: 0.00147522846236825 step 7: 0.0 
+Epoch 12 free FID: 174.57 (best: 174.57) clamped FID: 172.86 (best: 172.67)
+autocorrelations at epoch 13: step 0: 0.0 step 1: 0.0020980313420295715 step 2: 0.0 step 3: 5.0237624236615375e-05 step 4: 0.0 step 5: 0.05406537279486656 step 6: 0.04867148399353027 step 7: 0.03038030117750168 
+correlation penalties: step 0: 0.0 step 1: 0.0 step 2: 0.0 step 3: 0.0 step 4: 0.0 step 5: 0.0012674640165641904 step 6: 0.0011244756169617176 step 7: 0.0 
+Epoch 13 free FID: 169.73 (best: 169.73) clamped FID: 170.49 (best: 170.49)
+autocorrelations at epoch 14: step 0: 0.00462702102959156 step 1: 0.0 step 2: 0.00018941400048788637 step 3: 0.00039862131234258413 step 4: 0.007013547234237194 step 5: 0.06652453541755676 step 6: 0.05974408984184265 step 7: 0.03153889253735542 
+correlation penalties: step 0: 0.0 step 1: 0.0 step 2: 0.0 step 3: 0.0 step 4: 0.0 step 5: 0.0015209568664431572 step 6: 0.0 step 7: 0.0 
+Epoch 14 free FID: 171.73 (best: 169.73) clamped FID: 173.24 (best: 170.49)
+autocorrelations at epoch 15: step 0: 0.0002339452476007864 step 1: 0.0015332624316215515 step 2: 0.0 step 3: 0.0 step 4: 0.000687197782099247 step 5: 0.0508868545293808 step 6: 0.09098996222019196 step 7: 0.03484180197119713 
+correlation penalties: step 0: 0.0 step 1: 0.0 step 2: 0.0 step 3: 0.0 step 4: 0.0 step 5: 0.001170563162304461 step 6: 0.0012000000569969416 step 7: 0.0 
+Epoch 15 free FID: 174.23 (best: 169.73) clamped FID: 170.34 (best: 170.34)
+autocorrelations at epoch 16: step 0: 0.0 step 1: 0.004107404034584761 step 2: 0.0016543488018214703 step 3: 0.0004712349909823388 step 4: 0.0 step 5: 0.07138393819332123 step 6: 0.08154303580522537 step 7: 0.022910460829734802 
+correlation penalties: step 0: 0.0 step 1: 0.0 step 2: 0.0 step 3: 0.0 step 4: 0.0 step 5: 0.0014046758878976107 step 6: 0.0011400000657886267 step 7: 0.0 
+Epoch 16 free FID: 172.29 (best: 169.73) clamped FID: 172.83 (best: 170.34)
+autocorrelations at epoch 17: step 0: 0.0 step 1: 0.0 step 2: 0.0008336710743606091 step 3: 0.0020334043074399233 step 4: 0.0032902960665524006 step 5: 0.05095541849732399 step 6: 0.07889145612716675 step 7: 0.03042101114988327 
+correlation penalties: step 0: 0.0 step 1: 0.0 step 2: 0.0 step 3: 0.0 step 4: 0.0 step 5: 0.001081391703337431 step 6: 0.0010830000974237919 step 7: 0.0 
+Epoch 17 free FID: 164.76 (best: 164.76) clamped FID: 165.10 (best: 165.10)
+autocorrelations at epoch 18: step 0: 0.0 step 1: 0.0 step 2: 0.0 step 3: 0.0 step 4: 0.0021724875550717115 step 5: 0.048654478043317795 step 6: 0.07977350801229477 step 7: 0.03229288011789322 
+correlation penalties: step 0: 0.0 step 1: 0.0 step 2: 0.0 step 3: 0.0 step 4: 0.0 step 5: 0.0 step 6: 0.0012996001169085503 step 7: 0.0 
+Epoch 18 free FID: 167.35 (best: 164.76) clamped FID: 165.96 (best: 165.10)
+autocorrelations at epoch 19: step 0: 0.0023697917349636555 step 1: 0.0 step 2: 0.00011578615522012115 step 3: 0.0 step 4: 0.0021269400604069233 step 5: 0.08419336378574371 step 6: 0.05501599609851837 step 7: 0.03145940601825714 
+correlation penalties: step 0: 0.0 step 1: 0.0 step 2: 0.0 step 3: 0.0 step 4: 0.0 step 5: 0.0012000000569969416 step 6: 0.0010180893586948514 step 7: 0.0 
+Epoch 19 free FID: 163.45 (best: 163.45) clamped FID: 165.62 (best: 165.10)
+autocorrelations at epoch 20: step 0: 0.0 step 1: 0.0 step 2: 0.0 step 3: 0.0 step 4: 0.0 step 5: 0.09271853417158127 step 6: 0.06788868457078934 step 7: 0.02911580540239811 
+correlation penalties: step 0: 0.0 step 1: 0.0 step 2: 0.0 step 3: 0.0 step 4: 0.0 step 5: 0.001440000138245523 step 6: 0.0012217073235660791 step 7: 0.0 
+Epoch 20 free FID: 163.85 (best: 163.45) clamped FID: 165.71 (best: 165.10)
+autocorrelations at epoch 21: step 0: 0.0 step 1: 0.006116390693932772 step 2: 0.007286726031452417 step 3: 0.0013916881289333105 step 4: 0.004415631759911776 step 5: 0.06707556545734406 step 6: 0.06379904597997665 step 7: 0.04146728292107582 
+correlation penalties: step 0: 0.0 step 1: 0.0 step 2: 0.0 step 3: 0.0 step 4: 0.0 step 5: 0.0013680001720786095 step 6: 0.0011606219923123717 step 7: 0.0 
+Epoch 21 free FID: 165.26 (best: 163.45) clamped FID: 162.16 (best: 162.16)
+autocorrelations at epoch 22: step 0: 0.001862320234067738 step 1: 0.00039554174873046577 step 2: 0.003506565000861883 step 3: 0.003862537909299135 step 4: 0.006280534900724888 step 5: 0.05616776645183563 step 6: 0.07699867337942123 step 7: 0.03441089019179344 
+correlation penalties: step 0: 0.0 step 1: 0.0 step 2: 0.0 step 3: 0.0 step 4: 0.0 step 5: 0.001076925196684897 step 6: 0.0013927464606240392 step 7: 0.0 
+Epoch 22 free FID: 164.75 (best: 163.45) clamped FID: 164.64 (best: 162.16)
+autocorrelations at epoch 23: step 0: 0.009334027767181396 step 1: 0.0007045571110211313 step 2: 0.0009443524177186191 step 3: 0.0007903969381004572 step 4: 0.016157085075974464 step 5: 0.06914766877889633 step 6: 0.056392062455415726 step 7: 0.03138347715139389 
+correlation penalties: step 0: 0.0 step 1: 0.0 step 2: 0.0 step 3: 0.0 step 4: 0.0 step 5: 0.0012923103058710694 step 6: 0.0010974473552778363 step 7: 0.0 
+Epoch 23 free FID: 164.71 (best: 163.45) clamped FID: 163.57 (best: 162.16)
+autocorrelations at epoch 24: step 0: 0.0007089698337949812 step 1: 0.0 step 2: 0.0019828323274850845 step 3: 3.289471715106629e-05 step 4: 0.0006166610401123762 step 5: 0.06576504558324814 step 6: 0.07754025608301163 step 7: 0.036740608513355255 
+correlation penalties: step 0: 0.0 step 1: 0.0 step 2: 0.0 step 3: 0.0 step 4: 0.0 step 5: 0.001227694796398282 step 6: 0.001316936919465661 step 7: 0.0 
+Epoch 24 free FID: 158.26 (best: 158.26) clamped FID: 157.18 (best: 157.18)
+autocorrelations at epoch 25: step 0: 0.0 step 1: 0.0 step 2: 0.0027467203326523304 step 3: 0.0011729437392205 step 4: 0.021108312532305717 step 5: 0.07412788271903992 step 6: 0.060175571590662 step 7: 0.033100664615631104 
+correlation penalties: step 0: 0.0 step 1: 0.0 step 2: 0.0 step 3: 0.0 step 4: 0.0 step 5: 0.0014732338022440672 step 6: 0.0012510900851339102 step 7: 0.0 
+Epoch 25 free FID: 156.46 (best: 156.46) clamped FID: 158.47 (best: 157.18)
+autocorrelations at epoch 26: step 0: 0.0023199408315122128 step 1: 0.0 step 2: 0.003052684012800455 step 3: 0.0 step 4: 0.04627816751599312 step 5: 0.06417527794837952 step 6: 0.058744605630636215 step 7: 0.03650801628828049 
+correlation penalties: step 0: 0.0 step 1: 0.0 step 2: 0.0 step 3: 0.0 step 4: 0.0 step 5: 0.001399572123773396 step 6: 0.0 step 7: 0.0 
+Epoch 26 free FID: 166.30 (best: 156.46) clamped FID: 160.80 (best: 157.18)
+autocorrelations at epoch 27: step 0: 0.0035146239679306746 step 1: 0.0 step 2: 0.004255453124642372 step 3: 0.005383298732340336 step 4: 0.054440394043922424 step 5: 0.055395353585481644 step 6: 0.04590681567788124 step 7: 0.022815171629190445 
+correlation penalties: step 0: 0.0 step 1: 0.0 step 2: 0.0 step 3: 0.0 step 4: 0.0 step 5: 0.0010981758823618293 step 6: 0.0 step 7: 0.0 
+Epoch 27 free FID: 169.63 (best: 156.46) clamped FID: 166.91 (best: 157.18)
+autocorrelations at epoch 28: step 0: 0.0 step 1: 0.0 step 2: 0.002615527715533972 step 3: 0.0 step 4: 0.10814310610294342 step 5: 0.059793975204229355 step 6: 0.07310246676206589 step 7: 0.03147123008966446 
+correlation penalties: step 0: 0.0 step 1: 0.0 step 2: 0.0 step 3: 0.0 step 4: 0.001500000013038516 step 5: 0.0 step 6: 0.0012000000569969416 step 7: 0.0 
+Epoch 28 free FID: 165.61 (best: 156.46) clamped FID: 164.65 (best: 157.18)
+autocorrelations at epoch 29: step 0: 0.0 step 1: 0.0 step 2: 0.003255325136706233 step 3: 0.002945861080661416 step 4: 0.07095810770988464 step 5: 0.08213100582361221 step 6: 0.08418816328048706 step 7: 0.03957776352763176 
+correlation penalties: step 0: 0.0 step 1: 0.0 step 2: 0.0 step 3: 0.0 step 4: 0.0014250000240281224 step 5: 0.0012000000569969416 step 6: 0.001440000138245523 step 7: 0.0 
+Epoch 29 free FID: 164.10 (best: 156.46) clamped FID: 161.23 (best: 157.18)
+autocorrelations at epoch 30: step 0: 0.0018283916870132089 step 1: 0.004008682444691658 step 2: 0.000645791704300791 step 3: 0.0023360804188996553 step 4: 0.0682969018816948 step 5: 0.06583034992218018 step 6: 0.04597969353199005 step 7: 0.023631764575839043 
+correlation penalties: step 0: 0.0 step 1: 0.0 step 2: 0.0 step 3: 0.0 step 4: 0.001353750005364418 step 5: 0.0011400000657886267 step 6: 0.001084702555090189 step 7: 0.0 
+Epoch 30 free FID: 158.44 (best: 156.46) clamped FID: 156.54 (best: 156.54)
+autocorrelations at epoch 31: step 0: 0.008030994795262814 step 1: 0.0 step 2: 0.0 step 3: 0.0 step 4: 0.07299064844846725 step 5: 0.06159667670726776 step 6: 0.05396683141589165 step 7: 0.032802533358335495 
+correlation penalties: step 0: 0.0 step 1: 0.0 step 2: 0.0 step 3: 0.0 step 4: 0.001624500029720366 step 5: 0.0010830000974237919 step 6: 0.0 step 7: 0.0 
+Epoch 31 free FID: 153.66 (best: 153.66) clamped FID: 157.34 (best: 156.54)
+autocorrelations at epoch 32: step 0: 0.018625706434249878 step 1: 0.0 step 2: 0.004123333841562271 step 3: 0.002688091015443206 step 4: 0.06598598510026932 step 5: 0.059219349175691605 step 6: 0.09715449064970016 step 7: 0.03406602889299393 
+correlation penalties: step 0: 0.0 step 1: 0.0 step 2: 0.0 step 3: 0.0 step 4: 0.0015432749642059207 step 5: 0.0 step 6: 0.0012000000569969416 step 7: 0.0 
+Epoch 32 free FID: 158.63 (best: 153.66) clamped FID: 161.86 (best: 156.54)
+autocorrelations at epoch 33: step 0: 0.014981655403971672 step 1: 0.005100673995912075 step 2: 0.0 step 3: 0.0011263671331107616 step 4: 0.07439747452735901 step 5: 0.09786077588796616 step 6: 0.08919437974691391 step 7: 0.044865939766168594 
+correlation penalties: step 0: 0.0 step 1: 0.0 step 2: 0.0 step 3: 0.0 step 4: 0.0018519300501793623 step 5: 0.0012000000569969416 step 6: 0.0011400000657886267 step 7: 0.0 
+Epoch 33 free FID: 160.07 (best: 153.66) clamped FID: 154.42 (best: 154.42)
+autocorrelations at epoch 34: step 0: 0.0310224499553442 step 1: 0.0 step 2: 0.0013367935316637158 step 3: 0.000490891863591969 step 4: 0.03042520396411419 step 5: 0.06975828111171722 step 6: 0.04359728842973709 step 7: 0.030927900224924088 
+correlation penalties: step 0: 0.0 step 1: 0.0 step 2: 0.0 step 3: 0.0 step 4: 0.0012989757815375924 step 5: 0.0011400000657886267 step 6: 0.0 step 7: 0.0 
+Epoch 34 free FID: 152.71 (best: 152.71) clamped FID: 153.07 (best: 153.07)
+autocorrelations at epoch 35: step 0: 0.05188741907477379 step 1: 0.0 step 2: 0.002168188337236643 step 3: 0.0 step 4: 0.04065746068954468 step 5: 0.09226535260677338 step 6: 0.08162733167409897 step 7: 0.034721434116363525 
+correlation penalties: step 0: 0.0 step 1: 0.0 step 2: 0.0 step 3: 0.0 step 4: 0.0 step 5: 0.0013680001720786095 step 6: 0.0012000000569969416 step 7: 0.0 
+Epoch 35 free FID: 159.15 (best: 152.71) clamped FID: 156.22 (best: 153.07)
+autocorrelations at epoch 36: step 0: 0.06078428775072098 step 1: 0.0021494615357369184 step 2: 0.0019789086654782295 step 3: 0.0014954147627577186 step 4: 0.048662085086107254 step 5: 0.06436645984649658 step 6: 0.05917459353804588 step 7: 0.027423450723290443 
+correlation penalties: step 0: 0.0012000000569969416 step 1: 0.0 step 2: 0.0 step 3: 0.0 step 4: 0.0 step 5: 0.0012996001169085503 step 6: 0.0 step 7: 0.0 
+Epoch 36 free FID: 163.59 (best: 152.71) clamped FID: 160.62 (best: 153.07)
+autocorrelations at epoch 37: step 0: 0.07813029736280441 step 1: 0.0069589754566550255 step 2: 0.0 step 3: 0.002841111971065402 step 4: 0.06177351996302605 step 5: 0.060362569987773895 step 6: 0.07997600734233856 step 7: 0.04072492942214012 
+correlation penalties: step 0: 0.001440000138245523 step 1: 0.0 step 2: 0.0 step 3: 0.0 step 4: 0.0012000000569969416 step 5: 0.0012346201110631227 step 6: 0.0012000000569969416 step 7: 0.0 
+Epoch 37 free FID: 158.44 (best: 152.71) clamped FID: 157.61 (best: 153.07)
+autocorrelations at epoch 38: step 0: 0.11754584312438965 step 1: 0.0 step 2: 0.001154101686552167 step 3: 0.0 step 4: 0.06897956877946854 step 5: 0.054499607533216476 step 6: 0.08980251103639603 step 7: 0.029313286766409874 
+correlation penalties: step 0: 0.0021600001491606236 step 1: 0.0 step 2: 0.0 step 3: 0.0 step 4: 0.001440000138245523 step 5: 0.0 step 6: 0.001440000138245523 step 7: 0.0 
+Epoch 38 free FID: 155.80 (best: 152.71) clamped FID: 154.95 (best: 153.07)
+autocorrelations at epoch 39: step 0: 0.09978799521923065 step 1: 0.0 step 2: 0.0 step 3: 0.010492581874132156 step 4: 0.04234354943037033 step 5: 0.08667651563882828 step 6: 0.08154012262821198 step 7: 0.03160681948065758 
+correlation penalties: step 0: 0.0020520000252872705 step 1: 0.0 step 2: 0.0 step 3: 0.0 step 4: 0.0010672492207959294 step 5: 0.0012000000569969416 step 6: 0.0013680001720786095 step 7: 0.0 
+Epoch 39 free FID: 162.02 (best: 152.71) clamped FID: 159.40 (best: 153.07)
+autocorrelations at epoch 40: step 0: 0.09783095866441727 step 1: 0.001929786056280136 step 2: 0.004098737612366676 step 3: 0.0054820445366203785 step 4: 0.04038572683930397 step 5: 0.07632198929786682 step 6: 0.057533148676157 step 7: 0.027506930753588676 
+correlation penalties: step 0: 0.0019493999425321817 step 1: 0.0 step 2: 0.0 step 3: 0.0 step 4: 0.0 step 5: 0.0011400000657886267 step 6: 0.0010831512045115232 step 7: 0.0 
+Epoch 40 free FID: 156.00 (best: 152.71) clamped FID: 158.03 (best: 153.07)
+autocorrelations at epoch 41: step 0: 0.08534511178731918 step 1: 0.0011903565609827638 step 2: 0.0 step 3: 0.008098124526441097 step 4: 0.054872993379831314 step 5: 0.03780104219913483 step 6: 0.056505005806684494 step 7: 0.037270817905664444 
+correlation penalties: step 0: 0.0018519299337640405 step 1: 0.0 step 2: 0.0 step 3: 0.0 step 4: 0.0 step 5: 0.0 step 6: 0.0 step 7: 0.0 
+Epoch 41 free FID: 160.84 (best: 152.71) clamped FID: 162.34 (best: 153.07)
+autocorrelations at epoch 42: step 0: 0.11053405702114105 step 1: 0.0 step 2: 0.00045530754141509533 step 3: 0.025832226499915123 step 4: 0.0862678810954094 step 5: 0.10418859124183655 step 6: 0.07606211304664612 step 7: 0.0339103601872921 
+correlation penalties: step 0: 0.0027778949588537216 step 1: 0.0 step 2: 0.0 step 3: 0.0 step 4: 0.0012000000569969416 step 5: 0.0012000000569969416 step 6: 0.0012000000569969416 step 7: 0.0 
+Epoch 42 free FID: 159.24 (best: 152.71) clamped FID: 156.95 (best: 153.07)
+autocorrelations at epoch 43: step 0: 0.08079354465007782 step 1: 0.0 step 2: 0.0037037022411823273 step 3: 0.05896144360303879 step 4: 0.05491644889116287 step 5: 0.06714945286512375 step 6: 0.05609599128365517 step 7: 0.023520659655332565 
+correlation penalties: step 0: 0.0026390000712126493 step 1: 0.0 step 2: 0.0 step 3: 0.0 step 4: 0.0 step 5: 0.0011400000657886267 step 6: 0.0 step 7: 0.0 
+Epoch 43 free FID: 156.08 (best: 152.71) clamped FID: 155.02 (best: 153.07)
+autocorrelations at epoch 44: step 0: 0.07229430228471756 step 1: 0.0 step 2: 0.004856303799897432 step 3: 0.06600064784288406 step 4: 0.05888282135128975 step 5: 0.06865940243005753 step 6: 0.06811078637838364 step 7: 0.025894340127706528 
+correlation penalties: step 0: 0.0025070500560104847 step 1: 0.0 step 2: 0.0 step 3: 0.0012000000569969416 step 4: 0.0 step 5: 0.0013680001720786095 step 6: 0.0012000000569969416 step 7: 0.0 
+Epoch 44 free FID: 159.82 (best: 152.71) clamped FID: 157.45 (best: 153.07)
+autocorrelations at epoch 45: step 0: 0.04152804613113403 step 1: 0.0 step 2: 0.00016598675574641675 step 3: 0.08482062071561813 step 4: 0.09713252633810043 step 5: 0.05721823498606682 step 6: 0.05715544521808624 step 7: 0.02715464122593403 
+correlation penalties: step 0: 0.001851273002102971 step 1: 0.0 step 2: 0.0 step 3: 0.001440000138245523 step 4: 0.0012000000569969416 step 5: 0.001081715221516788 step 6: 0.0 step 7: 0.0 
+Epoch 45 free FID: 154.64 (best: 152.71) clamped FID: 155.74 (best: 153.07)
+autocorrelations at epoch 46: step 0: 0.0458986759185791 step 1: 0.00148125016130507 step 2: 0.00277491332963109 step 3: 0.09461694210767746 step 4: 0.07749300450086594 step 5: 0.057138871401548386 step 6: 0.07935953140258789 step 7: 0.03240945190191269 
+correlation penalties: step 0: 0.001394000486470759 step 1: 0.0 step 2: 0.0 step 3: 0.0017280002357438207 step 4: 0.0011400000657886267 step 5: 0.0 step 6: 0.0012000000569969416 step 7: 0.0 
+Epoch 46 free FID: 155.43 (best: 152.71) clamped FID: 155.61 (best: 153.07)
+autocorrelations at epoch 47: step 0: 0.039907947182655334 step 1: 2.7837508241645992e-05 step 2: 0.004072356503456831 step 3: 0.06180175021290779 step 4: 0.05126037821173668 step 5: 0.08944206684827805 step 6: 0.06941699981689453 step 7: 0.03264250606298447 
+correlation penalties: step 0: 0.0010218393290415406 step 1: 0.0 step 2: 0.0 step 3: 0.0016416001599282026 step 4: 0.0 step 5: 0.0012000000569969416 step 6: 0.0011400000657886267 step 7: 0.0 
+Epoch 47 free FID: 152.78 (best: 152.71) clamped FID: 153.66 (best: 153.07)
+autocorrelations at epoch 48: step 0: 0.032618843019008636 step 1: 0.0 step 2: 0.0 step 3: 0.03999580815434456 step 4: 0.057888373732566833 step 5: 0.08306150138378143 step 6: 0.05485356226563454 step 7: 0.027122434228658676 
+correlation penalties: step 0: 0.0 step 1: 0.0 step 2: 0.0 step 3: 0.001203817198984325 step 4: 0.0 step 5: 0.0011400000657886267 step 6: 0.0 step 7: 0.0 
+Epoch 48 free FID: 155.21 (best: 152.71) clamped FID: 153.34 (best: 153.07)
+autocorrelations at epoch 49: step 0: 0.022745119407773018 step 1: 0.0049938419833779335 step 2: 0.0017658264841884375 step 3: 0.030428333207964897 step 4: 0.11936308443546295 step 5: 0.08762310445308685 step 6: 0.11045030504465103 step 7: 0.030969364568591118 
+correlation penalties: step 0: 0.0 step 1: 0.0 step 2: 0.0 step 3: 0.0 step 4: 0.001500000013038516 step 5: 0.0013680001720786095 step 6: 0.001500000013038516 step 7: 0.0 
+Epoch 49 free FID: 157.36 (best: 152.71) clamped FID: 152.47 (best: 152.47)
+autocorrelations at epoch 50: step 0: 0.03056296706199646 step 1: 0.002987527521327138 step 2: 0.006198204588145018 step 3: 0.05830518156290054 step 4: 0.07344157248735428 step 5: 0.048623569309711456 step 6: 0.08324217796325684 step 7: 0.03659702092409134 
+correlation penalties: step 0: 0.0 step 1: 0.0 step 2: 0.0 step 3: 0.0 step 4: 0.0014250000240281224 step 5: 0.001042523654177785 step 6: 0.0014250000240281224 step 7: 0.0 
+Epoch 50 free FID: 148.14 (best: 148.14) clamped FID: 150.30 (best: 150.30)
+autocorrelations at epoch 51: step 0: 0.03987658768892288 step 1: 0.0005275211879052222 step 2: 0.0 step 3: 0.04120158404111862 step 4: 0.048624735325574875 step 5: 0.04982476681470871 step 6: 0.05586990714073181 step 7: 0.03012675605714321 
+correlation penalties: step 0: 0.0 step 1: 0.0 step 2: 0.0 step 3: 0.0 step 4: 0.0010859675239771605 step 5: 0.0 step 6: 0.001120382105000317 step 7: 0.0 
+Epoch 51 free FID: 148.98 (best: 148.14) clamped FID: 151.00 (best: 150.30)
+autocorrelations at epoch 52: step 0: 0.048982590436935425 step 1: 0.0 step 2: 0.002035955199971795 step 3: 0.06216168776154518 step 4: 0.04843193292617798 step 5: 0.06566332280635834 step 6: 0.05980616807937622 step 7: 0.029720677062869072 
+correlation penalties: step 0: 0.0 step 1: 0.0 step 2: 0.0 step 3: 0.0012000000569969416 step 4: 0.0 step 5: 0.0012000000569969416 step 6: 0.0 step 7: 0.0 
+Epoch 52 free FID: 156.01 (best: 148.14) clamped FID: 151.56 (best: 150.30)
+autocorrelations at epoch 53: step 0: 0.06752508133649826 step 1: 0.0074309175834059715 step 2: 0.005983239505439997 step 3: 0.09617511183023453 step 4: 0.06277933716773987 step 5: 0.10065508633852005 step 6: 0.09735353291034698 step 7: 0.044060222804546356 
+correlation penalties: step 0: 0.0012000000569969416 step 1: 0.0 step 2: 0.0 step 3: 0.001440000138245523 step 4: 0.0012000000569969416 step 5: 0.001440000138245523 step 6: 0.0012000000569969416 step 7: 0.0 
+Epoch 53 free FID: 150.71 (best: 148.14) clamped FID: 147.99 (best: 147.99)
+autocorrelations at epoch 54: step 0: 0.05772022902965546 step 1: 0.005752354860305786 step 2: 0.0005158090498298407 step 3: 0.039894700050354004 step 4: 0.049994830042123795 step 5: 0.054608725011348724 step 6: 0.05121786147356033 step 7: 0.028246190398931503 
+correlation penalties: step 0: 0.0 step 1: 0.0 step 2: 0.0 step 3: 0.001055494649335742 step 4: 0.0 step 5: 0.0011261219624429941 step 6: 0.0 step 7: 0.0 
+Epoch 54 free FID: 158.20 (best: 148.14) clamped FID: 156.14 (best: 147.99)
+autocorrelations at epoch 55: step 0: 0.05168556421995163 step 1: 0.0027682282961905003 step 2: 0.0012836644891649485 step 3: 0.03085196390748024 step 4: 0.07007235288619995 step 5: 0.043554842472076416 step 6: 0.06324272602796555 step 7: 0.03357268124818802 
+correlation penalties: step 0: 0.0 step 1: 0.0 step 2: 0.0 step 3: 0.0 step 4: 0.0012000000569969416 step 5: 0.0 step 6: 0.0012000000569969416 step 7: 0.0 
+Epoch 55 free FID: 155.68 (best: 148.14) clamped FID: 155.09 (best: 147.99)
+autocorrelations at epoch 56: step 0: 0.07042377442121506 step 1: 0.0010610833996906877 step 2: 0.0026996093802154064 step 3: 0.03225461021065712 step 4: 0.06585897505283356 step 5: 0.07037267833948135 step 6: 0.07080259919166565 step 7: 0.0360168032348156 
+correlation penalties: step 0: 0.0012000000569969416 step 1: 0.0 step 2: 0.0 step 3: 0.0 step 4: 0.0011400000657886267 step 5: 0.0012000000569969416 step 6: 0.001440000138245523 step 7: 0.0 
+Epoch 56 free FID: 155.24 (best: 148.14) clamped FID: 153.41 (best: 147.99)
+autocorrelations at epoch 57: step 0: 0.05826878547668457 step 1: 0.0030067816842347383 step 2: 0.010055797174572945 step 3: 0.04284685105085373 step 4: 0.06087544187903404 step 5: 0.08906995505094528 step 6: 0.06882984191179276 step 7: 0.033383000642061234 
+correlation penalties: step 0: 0.0 step 1: 0.0 step 2: 0.0 step 3: 0.0 step 4: 0.0010830000974237919 step 5: 0.001440000138245523 step 6: 0.0013680001720786095 step 7: 0.0 
+Epoch 57 free FID: 156.85 (best: 148.14) clamped FID: 155.98 (best: 147.99)
+autocorrelations at epoch 58: step 0: 0.07635663449764252 step 1: 0.0014526419108733535 step 2: 0.001973997103050351 step 3: 0.08442862331867218 step 4: 0.041162021458148956 step 5: 0.06819195300340652 step 6: 0.06354585289955139 step 7: 0.03563304990530014 
+correlation penalties: step 0: 0.0012000000569969416 step 1: 0.0 step 2: 0.0 step 3: 0.0012000000569969416 step 4: 0.0 step 5: 0.0013680001720786095 step 6: 0.0012996001169085503 step 7: 0.0 
+Epoch 58 free FID: 151.28 (best: 148.14) clamped FID: 151.95 (best: 147.99)
+autocorrelations at epoch 59: step 0: 0.09405985474586487 step 1: 0.0012735986383631825 step 2: 0.007244754116982222 step 3: 0.051747970283031464 step 4: 0.06413694471120834 step 5: 0.02956109493970871 step 6: 0.052119866013526917 step 7: 0.0358462892472744 
+correlation penalties: step 0: 0.001440000138245523 step 1: 0.0 step 2: 0.0 step 3: 0.0 step 4: 0.0012000000569969416 step 5: 0.0 step 6: 0.0010055433958768845 step 7: 0.0 
+Epoch 59 free FID: 152.13 (best: 148.14) clamped FID: 151.00 (best: 147.99)
+autocorrelations at epoch 60: step 0: 0.08088896423578262 step 1: 0.008217274211347103 step 2: 0.00028123697848059237 step 3: 0.0639239251613617 step 4: 0.08192510157823563 step 5: 0.09181006252765656 step 6: 0.07988646626472473 step 7: 0.03831371292471886 
+correlation penalties: step 0: 0.0013680001720786095 step 1: 0.0 step 2: 0.0 step 3: 0.0012000000569969416 step 4: 0.001440000138245523 step 5: 0.0012000000569969416 step 6: 0.0012066521449014544 step 7: 0.0 
+Epoch 60 free FID: 148.06 (best: 148.06) clamped FID: 147.79 (best: 147.79)
+autocorrelations at epoch 61: step 0: 0.02405354008078575 step 1: 0.0033685259986668825 step 2: 0.011683085933327675 step 3: 0.07319537550210953 step 4: 0.04827287048101425 step 5: 0.07344699651002884 step 6: 0.06735225766897202 step 7: 0.03331804648041725 
+correlation penalties: step 0: 0.0 step 1: 0.0 step 2: 0.0 step 3: 0.001440000138245523 step 4: 0.0010957098565995693 step 5: 0.0011400000657886267 step 6: 0.00114631955511868 step 7: 0.0 
+Epoch 61 free FID: 149.61 (best: 148.06) clamped FID: 150.30 (best: 147.79)

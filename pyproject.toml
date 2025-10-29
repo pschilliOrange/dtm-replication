@@ -1,0 +1,66 @@
+[project]
+name = "thrmlDenoising"
+version = "0.0.1"
+description = "Denoising / generative diffusion-style EBMs on top of THRML (JAX)"
+readme = "README.md"
+requires-python = ">=3.10"
+urls = { repository = "https://github.com/extropic-ai/thrmlDenoising" }
+
+dependencies = [
+    "thrml==0.1.3",
+    "equinox>=0.11.2",
+    "jaxtyping>=0.2.23",
+    "optax>=0.2.4",
+    "numpy",
+    "matplotlib>=3.7.1",
+    "pyyaml",
+    "tensorflow",
+    "tensorflow-datasets",
+    "imageio",
+    "tqdm",
+    "requests",
+    "flax",
+    "scipy",
+]
+
+[build-system]
+requires = ["setuptools>=65"]
+build-backend = "setuptools.build_meta"
+
+[project.optional-dependencies]
+examples = [
+    "jupyter>=1.0",
+    "networkx>=2.6.3",
+    "dwave_networkx>=0.8.0",
+    "scikit-learn>=1.7.0",
+    "tqdm",
+]
+
+testing = [
+    "coverage==7.3.2",
+    "pytest==7.2.0",
+    "nbmake==1.4.3",
+    "networkx>=2.6.3",
+    "optax>=0.2.4"
+]
+
+[tool.setuptools]
+packages = { find = { include = ["thrmlDenoising", "thrmlDenoising.*"] } }
+
+[tool.ruff]
+extend-include = ["*.ipynb"]
+src = []
+line-length = 120
+
+[tool.ruff.lint]
+ignore = ["F722"]
+
+[tool.isort]
+line_length = 120
+
+[tool.black]
+line-length = 120
+
+[tool.pyright]
+reportUnnecessaryTypeIgnoreComment = true
+include = ["thrmlDenoising", "thrml"]
